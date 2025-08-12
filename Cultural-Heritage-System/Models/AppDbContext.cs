@@ -20,6 +20,7 @@ namespace Cultural_Heritage_System.Models
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<PasswordReset> PasswordResets { get; set; }
         public DbSet<Profile> Profiles { get; set; }
+        public DbSet<Quiz> Quiz { get; set; }
         public DbSet<QuizCategory> QuizCategories { get; set; }
         public DbSet<QuizQuestion> QuizQuestions { get; set; }
         public DbSet<QuizRank> QuizRanks { get; set; }
@@ -78,6 +79,11 @@ namespace Cultural_Heritage_System.Models
                 .HasForeignKey(c => c.ReviewedBy)
                 .OnDelete(DeleteBehavior.NoAction);
 
+            modelBuilder.Entity<QuizResult>()
+                .HasOne(q => q.User)
+                .WithMany(u => u.QuizResults)
+                .HasForeignKey(q => q.UserId)
+                .OnDelete(DeleteBehavior.NoAction);
 
         }
     }

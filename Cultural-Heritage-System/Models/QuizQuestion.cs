@@ -6,7 +6,13 @@ namespace Cultural_Heritage_System.Models
 {
     public class QuizQuestion : BaseEntity<long>
     {
-     
+
+        [Column("quiz_id")]
+        [ForeignKey("Quiz")]
+        public long QuizId { get; set; }
+        public Quiz Quiz { get; set; }
+
+
         [Column("question")]
         public string Question { get; set; }
 
@@ -37,6 +43,7 @@ namespace Cultural_Heritage_System.Models
         [Column("quiz_rank_id")]
         public int QuizRankId { get; set; }
         public QuizRank? QuizRank { get; set; }
+
 
     }
 
