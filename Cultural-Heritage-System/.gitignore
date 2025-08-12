@@ -47,7 +47,6 @@ appsettings.Local.json
 appsettings.*.json
 
 # File cấu hình dự án
-Properties/launchSettings.json
 project.lock.json
 project.assets.json
 
