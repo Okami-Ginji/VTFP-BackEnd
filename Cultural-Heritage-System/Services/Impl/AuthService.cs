@@ -119,7 +119,7 @@ namespace Cultural_Heritage_System.Services.Impl
                 }
                 user = new User
                 {
-                    Username = userInfo.Name,
+                    UserName = userInfo.Name,
                     FullName = userInfo.Name,
                     Email = userInfo.Email,
                     Role = role,

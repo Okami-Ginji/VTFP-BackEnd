@@ -7,7 +7,7 @@ namespace Cultural_Heritage_System.Models
     public class User : BaseEntity<int>
     {
         [Column("username")]
-        public string Username { get; set; }
+        public string UserName { get; set; }
 
         [Column("email")]
         public string Email { get; set; }

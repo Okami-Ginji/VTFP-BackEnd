@@ -16,6 +16,11 @@ namespace Cultural_Heritage_System.Models
         [Column("score")]
         public int Score { get; set; }
 
+        [Column("quiz_id")]
+        [ForeignKey("Quiz")]
+        public long QuizId { get; set; }
+        public Quiz Quiz { get; set; }
+
         [Column("completed_at")]
         public DateTime CompletedAt { get; set; }
 
